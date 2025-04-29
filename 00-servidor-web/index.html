@@ -4,8 +4,198 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=divice-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* Estos es CSS*/
+        /* Selector por id*/
+        #titulo-muy-especial{
+            margin: 10px 20px 30px 40px;
+        }
+        /*Selector por etiqueta*/
+        /*Se puede conbinar los estilos separados por una ,*/
+        #titulo-muy-especial,h1,h2,h3,h4,h5,h6{
+            margin: 10px;
+            padding: 10px 20px 30px 40px;
+            padding-top: 1px;
+            padding-bottom: 2px;
+            padding-right: 3px;
+            padding-left: 4px;
+            padding: 15px;
+            border: green 5px solid;
+            border-color: green;
+            border-width: 14px;
+            border-style: dashed;
+        }
+
+        /*Clases en CSS*/
+        .lista-ordenada-mayusculas{
+            list-style: upper-alpha;
+        }
+        .lista-ordenada-romanas{
+            list-style: upper-roman;
+        }
+
+        li >a {
+            background-color: orange;
+        }
+
+        /*Seudo clase*/
+        ul >li:hover{
+            background-color: brown;
+        }
+        ul >li:first-child{
+            background-color: red;
+        }
+        ul >li:nth-child(4){
+            background-color: blue;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hola Mundo</h1>    
+    <h1 id="titulo-muy-especial"
+        style= "color:white; background-color: black;";>My First Heading</h1>
+    <h2>My First Heading</h2>
+    <h3>My First Heading</h3>
+    <h4>My First Heading</h4>
+    <h5>My First Heading</h5>
+    <h6 style="font-size:40px">My First Headin</h6>
+    <p>My first paragraph.</p>
+    <a href="www.google.com" target="_blank">Google</a>
+    <ul>
+        <li>
+            <a href="/index.html">
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="/a-tablas-anclas.html">
+                Tablas y Anclas
+            </a>
+        </li>
+        <li>
+            <a href="/assets/index.html">
+                Assets
+            </a>
+        </li>
+        <li>
+            <a href="/index.html">
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="/a-tablas-anclas.html">
+                Tablas y Anclas
+            </a>
+        </li>
+        <li>
+            <a href="/assets/index.html">
+                Assets
+            </a>
+        </li>
+    </ul>
+    <p>Links Internos</p>
+    <ul>
+        <li>
+            <a href="#parrafo1">Ir parrafó 1</a>
+        </li>
+        <li>
+            <a href="#parrafo2">Ir parrafó 2</a>
+        </li>
+    </ul>
+
+    <p id="parrafo1">Parrafó 1</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>Menu</h1>
+    <ul>
+        <li>
+            <a href="/index.html">
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="/a-tablas-anclas.html">
+                Tablas y Anclas
+            </a>
+        </li>
+        <li>
+            <a href="/assets/index.html">
+                Assets
+            </a>
+        </li>
+    </ul>
+    <ol class="lista-ordenada-romanas">
+        <li>Lunes
+            <ol class="lista-ordenada-mayusculas">
+                <li>a</li>
+                <li>b</li>
+            </ol>
+        </li>
+        <li>Martes</li>
+        <li>Miercoles</li>
+    </ol>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p id="parrafo2">Parrafó 2</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2>Imagenes</h2>
+    <img src="https://es.gizmodo.com/app/uploads/2025/01/Diseno-sin-titulo-8-25-1024x683.jpg" alt="Sagitario A">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h3>Tabla</h3>
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Nota</th>
+        </tr>
+        <tr>
+            <th>Jose</th>
+            <th>Arias</th>
+            <th>8</th>
+        </tr>
+        <tr>
+            <th>Joel</th>
+            <th>Defaz</th>
+            <th>9</th>
+        </tr>
+    </table>
 </body>
 </html>
