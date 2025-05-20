@@ -9,7 +9,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #0b0b0b;
+      background-color: #100c0c;
     }
     .top-banner {
       background: linear-gradient(to right, #2e3b5c, #31788a);
@@ -42,6 +42,142 @@
       margin-left: 15px;
       cursor: pointer;
     }
+
+    .btn.get-launcher-btn:hover{
+      background-color: #fdaf16;
+    }
+
+    .btn.btn-outline-light:hover{
+      background-color: #fdaf16;
+    }
+
+    .game-card img {
+      width: 100%;
+      border-radius: 5px;
+      transition: transform 0.3s;
+    }
+    .game-card img:hover {
+      transform: scale(1.03);
+    }
+    .section-title {
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .subscription-section {
+      background: linear-gradient(#100c0c, black) ;
+      /*background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAA...'); /* Reemplazar con tu propio fondo de íconos repetidos si lo tienes */
+      background-size: 40px;
+      background-repeat: repeat;
+      background-position: center;
+    }
+
+    .subscription-section .btn{
+      display: inline-block;
+      padding: 1em 2em;
+      border-radius: 2em;
+      border: 1px solid white
+    }
+    .subscription-section .btn:hover {
+      background-color: grey;
+      color: black;
+      border: none;
+      transition: 0.3s;
+    }
+
+    .rockstar-footer {
+      background-color: #000;
+      color: white;
+      padding: 40px 20px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    .footer-top{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 15px;
+    }
+
+    .footer-middle {
+      display: flex;
+      justify-content: left;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 15px;
+    }
+
+    .footer-top a,
+    .footer-middle a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .footer-top a:hover,
+    .footer-middle a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding-top: 20px;
+      margin-top: 20px;
+    }
+
+    .footer-bottom .left {
+      flex: 1;
+      color: #777;
+    }
+
+    .footer-bottom .center {
+      flex: 2;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      color: #aaa;
+    }
+
+    .footer-bottom .right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .footer-bottom .social-icons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .footer-bottom .social-icons img {
+      width: 20px;
+      height: 20px;
+
+      transition: filter 0.3s;
+    }
+
+    .footer-bottom .social-icons img:hover {
+      filter: none;
+    }
+
+    .footer-bottom .language {
+      color: #ccc;
+      font-size: 13px;
+    }
+
+    .footer-bottom .year {
+      color: #7ad3d3;
+      font-size: 13px;
+    }
+
   </style>
 </head>
 <body>
@@ -62,12 +198,9 @@
     <span class="icon"><img src="https://cdn-icons-png.flaticon.com/128/11741/11741045.png" alt="Search" width="18"></span>
     <span class="icon"><img src="https://cdn-icons-png.flaticon.com/128/848/848006.png" alt="Profile" width="18"></span>
   </div>
-  <!-- <div>
-    <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2025/05/todo-sabemos-gta-6-precio-fecha-lanzamiento-historia-personajes-novedades-jugables-regreso-vice-city-actividades-4323284.jpg?tf=1200x" 
-    alt="GTA-VI" style="width: 100%; height: auto;">
-  </div> -->
+
   <!-- CONTENEDOR PRINCIPAL -->
-<div class="d-flex flex-wrap" style="background-color: black; color: white;">
+<div class="d-flex flex-wrap" style="background-color: #0b0b0b; color: white;">
 
     <!-- COLUMNA IZQUIERDA: IMAGEN PROMOCIONAL -->
     <div style="flex: 1 1 70%; max-width: 100%;">
@@ -88,8 +221,258 @@
         <span style="display: inline-block; width: 12px; height: 12px; background: #333; border-radius: 50%; margin-right: 6px;"></span>
       </div>
     </div>
-  
+</div>
+
+<!-- SECCIÓN NEWSWIRE -->
+<div class="container py-5" style="background-color: #100c0c; color: white;">
+  <div class="section-title">Newswire</div>
+  <div class="row g-4">
+    <!-- TARJETA 1 -->
+    <div class="col-md-4">
+      <div class="card text-white border-light" style="background-color:black ;">
+        <img src="resources/gta6-small.png" class="card-img-top" alt="GTA Trailer 2">
+        <div class="card-body">
+          <small class="text-secondary">Grand Theft Auto VI   May 6, 2025</small>
+          <h6 class="card-title mt-2">Grand Theft Auto VI — Watch Trailer 2 Now</h6>
+        </div>
+      </div>
+    </div>
+
+    <!-- TARJETA 2 -->
+    <div class="col-md-4">
+      <div class="card text-white border-light" style="background-color:black ;">
+        <img src="resources/circoloco.png" class="card-img-top" alt="Circoloco">
+        <div class="card-body">
+          <small class="text-secondary">Circoloco Records   May 19, 2025</small>
+          <h6 class="card-title mt-2">Circoloco Records Presents: Sparrow & Barbossa</h6>
+        </div>
+      </div>
+    </div>
+
+    <!-- TARJETA 3 -->
+    <div class="col-md-4">
+      <div class="card text-white border-light" style="background-color:black ;">
+        <img src="resources/fib-files.png" class="card-img-top" alt="FIB Files">
+        <div class="card-body">
+          <small class="text-secondary">GTA Online    May 15, 2025</small>
+          <h6 class="card-title mt-2">Engage in Disruption to Earn Doubles on All FIB Files Payouts</h6>
+        </div>
+      </div>
+    </div>
+
+    <!-- TARJETA 4 -->
+    <div class="col-md-4">
+      <div class="card text-white border-light" style="background-color:black ;">
+        <img src="resources/gta-online.png" class="card-img-top" alt="GTA Trailer 2">
+        <div class="card-body">
+          <small class="text-secondary">Grand Online  May 8, 2025</small>
+          <h6 class="card-title mt-2">Secure the Bag with Bonuses on The contract adn More</h6>
+        </div>
+      </div>
+    </div>
+
+    <!-- TARJETA 5 -->
+    <div class="col-md-4">
+      <div class="card text-white border-light" style="background-color:black ;">
+        <img src="resources/gta6-logo.png" class="card-img-top" alt="Circoloco">
+        <div class="card-body">
+          <small class="text-secondary">Grand Theft Auto  May 2, 2025</small>
+          <h6 class="card-title mt-2">Grand Theft Auto VI is Now Coming May 16,2026</h6>
+        </div>
+      </div>
+    </div>
+
+    <!-- TARJETA 3 -->
+    <div class="col-md-4">
+      <div class="card text-white border-light" style="background-color:black ;">
+        <img src="resources/gta-plus.png" class="card-img-top" alt="FIB Files">
+        <div class="card-body">
+          <small class="text-secondary">GTA Online    May 1, 2025</small>
+          <h6 class="card-title mt-2">Assert Dominance with the Free Mammoth Patriot Mil-Spec for GTA+Members</h6>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <!-- BOTÓN VIEW MORE -->
+  <div class="text-center mt-4">
+    <button class="btn btn-outline-light">View More</button>
+  </div>
+</div>
+
+<!-- SECCIÓN FEATURED GAMES -->
+<div class="container py-5" style="background-color: #100c0c; color: white;">
+  <!-- Featured Games Title -->
+  <div class="section-title">Featured Games</div>
+
+  <div class="mb-4 game-card">
+    <img src="resources/gta6-banner.png" class="img-fluid w-100" alt="GTA VI Banner">
+  </div>
+
+  <div class="row g-4">
+    <div class="col-6 col-md-3 game-card">
+      <img src="resources/gta5.png" alt="GTA V">
+    </div>
+    <div class="col-6 col-md-3 game-card">
+      <img src="resources/gtaonline.png" alt="GTA Online">
+    </div>
+    <div class="col-6 col-md-3 game-card">
+      <img src="resources/rdr2.png" alt="Red Dead Redemption 2">
+    </div>
+    <div class="col-6 col-md-3 game-card">
+      <img src="resources/rdr.png" alt="Red Dead Redemption">
+    </div>
+  </div>
+
+  <!-- BOTÓN VIEW MORE -->
+  <div class="text-center mt-4">
+    <button class="btn btn-outline-light">View More</button>
+  </div>
+</div>
+
+<!-- SECCIÓN DE SUSCRIPCIÓN -->
+<div class="subscription-section py-5 text-center">
+  <div class="container">
+    <h6 style="color: white; font-size: 14px; letter-spacing: 1px; text-transform: uppercase;"><img src="resources/rsg-icono.png" alt="RockStart-Games-Icono"></h6>
+    <h5 class="fw-bold text-white mt-3">Suscríbete a la lista de correo de Rockstar Games</h5>
+    <p class="text-secondary px-3" style="max-width: 700px; margin: auto;">
+      Suscríbete a nuestro boletín de noticias para obtener información sobre los anuncios y actualizaciones de juegos, detalles sobre eventos especiales, ofertas y mucho más sobre Rockstar Games y sus afiliados.
+    </p>
+    <button class="btn btn-outline-light mt-3 px-4 py-2">Suscríbete ya</button>
+  </div>
+</div>
+
+<div>
+  <footer class="rockstar-footer">
+    <div class="footer-top">
+      <nav>
+        <ul style="list-style: none;">
+          <li>
+            <a title="" data-testid="footer-contact-link" aria-label="" class="" href="/contact">Contact</a>
+          </li>
+          <li>
+            <a title="" data-testid="footer-contact-link" aria-label="" class="" href="/contact">Careers</a>
+          </li>
+          <li>
+            <a title="" data-testid="footer-contact-link" aria-label="" class="" href="/contact">Community Guidelines</a>
+          </li>
+          <li>
+            <a title="" data-testid="footer-contact-link" aria-label="" class="" href="/contact">Subscribe</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="">
+        <select name="select">
+          <option value="value1">Español</option>
+          <option value="value2" selected>English</option>
+          <option value="value3">Portugues</option>
+        </select>
+      </div>
+    </div>
   
+    <div class="footer-middle">
+      <nav>
+        <ul style="list-style: none;">
+          <li>
+            <a title="" data-testid="footer-contact-link" aria-label="" class="" href="/contact">Corporate</a>
+          </li>
+          <li>
+            <a title="" data-testid="footer-contact-link" aria-label="" class="" href="/contact">Privacy</a>
+          </li>
+          <li>
+            <a title="" data-testid="footer-contact-link" aria-label="" class="" href="/contact">Cookie Settings</a>
+          </li>
+          <li>
+            <a title="" data-testid="footer-contact-link" aria-label="" class="" href="/contact">Legal</a>
+          </li>
+          <li>
+            <a href="#">Do Not Sell or Share My Personal Information</a>
+          </li>
+        </ul>
+      </nav>
+      <nav>
+        <ul style="list-style: none; display: inline;">
+          <li>
+            <a href="https://x.com/rockstargames" title="X" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" class="foundry_nk7jgu_v1yii70 foundry_nk7jgu_v1yii72" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M13.903 10.469 21.348 2h-1.764l-6.465 7.353L7.955 2H2l7.808 11.12L2 22h1.764l6.828-7.765L16.044 22H22zm-2.417 2.748-.791-1.107L4.4 3.3h2.71l5.08 7.11.791 1.107 6.604 9.242h-2.71z"></path>
+              </svg>
+              <span style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; overflow-wrap: normal;">
+                Rockstar Games X
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com/rockstargames" title="Instagram" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" class="foundry_nk7jgu_v1yii70 foundry_nk7jgu_v1yii72" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M7.858 2.07c-1.064.05-1.79.22-2.425.47-.658.256-1.215.6-1.77 1.156a4.9 4.9 0 0 0-1.15 1.772c-.246.637-.413 1.364-.46 2.429s-.057 1.407-.052 4.122c.005 2.716.017 3.056.069 4.123.05 1.064.22 1.79.47 2.426.256.657.6 1.214 1.156 1.769a4.9 4.9 0 0 0 1.774 1.15c.636.246 1.363.413 2.428.46 1.064.046 1.407.057 4.122.052s3.056-.017 4.123-.068c1.067-.05 1.79-.22 2.425-.47a4.9 4.9 0 0 0 1.769-1.156 4.9 4.9 0 0 0 1.15-1.774c.246-.636.413-1.363.46-2.427.046-1.067.057-1.408.052-4.123s-.018-3.056-.068-4.122c-.05-1.067-.22-1.79-.47-2.427a4.9 4.9 0 0 0-1.156-1.769 4.9 4.9 0 0 0-1.773-1.15c-.637-.245-1.364-.413-2.428-.46-1.065-.045-1.407-.057-4.123-.052s-3.056.017-4.123.069m.117 18.078c-.975-.043-1.504-.205-1.857-.34-.467-.18-.8-.398-1.152-.746a3.1 3.1 0 0 1-.75-1.149c-.137-.352-.302-.881-.347-1.856-.05-1.054-.06-1.37-.066-4.04s.004-2.986.05-4.04c.042-.974.205-1.504.34-1.857.18-.468.397-.8.746-1.151a3.1 3.1 0 0 1 1.15-.75c.351-.138.88-.302 1.855-.348 1.054-.05 1.37-.06 4.04-.066s2.986.004 4.041.05c.974.043 1.505.204 1.857.34.467.18.8.397 1.151.746.352.35.568.682.75 1.15.138.35.302.88.348 1.855.05 1.054.062 1.37.066 4.04s-.004 2.986-.05 4.04c-.043.975-.205 1.504-.34 1.858a3.1 3.1 0 0 1-.747 1.15c-.349.352-.681.568-1.148.75-.352.138-.882.302-1.855.349-1.055.05-1.371.06-4.041.065s-2.986-.005-4.04-.05m8.152-13.493a1.2 1.2 0 1 0 2.4-.003 1.2 1.2 0 0 0-2.4.003M6.865 12.01a5.134 5.134 0 1 0 10.27-.02 5.134 5.134 0 0 0-10.27.02m1.802-.004a3.333 3.333 0 1 1 6.666-.013 3.333 3.333 0 0 1-6.666.013"></path>
+              </svg>
+              <span style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; overflow-wrap: normal;">
+                Rockstar Games Instagram
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/rockstargames" title="YouTube" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" class="foundry_nk7jgu_v1yii70 foundry_nk7jgu_v1yii72" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M21.584 7.186a2.5 2.5 0 0 0-1.769-1.768C18.255 5 12 5 12 5s-6.255 0-7.814.418a2.5 2.5 0 0 0-1.768 1.768C2 8.746 2 12 2 12s0 3.255.418 4.814c.23.86.907 1.537 1.768 1.768C5.746 19 12 19 12 19s6.255 0 7.814-.418a2.5 2.5 0 0 0 1.768-1.768C22 15.254 22 12 22 12s0-3.255-.418-4.814zM10 15V9l5.196 3z"></path>
+              </svg>
+              <span style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; overflow-wrap: normal;">
+                Rockstar Games YouTube
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/rockstargames" title="Facebook" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" class="foundry_nk7jgu_v1yii70 foundry_nk7jgu_v1yii72" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M22 12.037C22 6.494 17.523 2 12 2S2 6.494 2 12.037c0 4.706 3.229 8.656 7.584 9.74v-6.673H7.522v-3.067h2.062v-1.322c0-3.416 1.54-5 4.882-5 .634 0 1.727.125 2.174.25v2.78a13 13 0 0 0-1.155-.037c-1.64 0-2.273.623-2.273 2.244v1.085h3.266l-.561 3.067h-2.705V22C18.163 21.4 22 17.168 22 12.037"></path>
+              </svg>
+              <span style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; overflow-wrap: normal;">
+                Rockstar Games Facebook
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitch.tv/rockstargames" title="Twitch" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" class="foundry_nk7jgu_v1yii70 foundry_nk7jgu_v1yii72" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M7.001 2 3.43 5.571V18.43h4.285V22l3.572-3.571h2.857L20.573 12V2zm12.143 9.286-2.857 2.857H13.43l-2.5 2.5v-2.5H7.715V3.429h11.429z"></path>
+                <path fill="currentColor" d="M17.001 5.929h-1.429v4.285h1.43zM13.073 5.929h-1.429v4.285h1.428z"></path>
+              </svg>
+              <span style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; overflow-wrap: normal;">
+                Rockstar Games Twitch
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://discord.gg/rockstargames" title="Discord" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" class="foundry_nk7jgu_v1yii70 foundry_nk7jgu_v1yii72" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M18.942 5.69a16.5 16.5 0 0 0-4.126-1.27q-.293.523-.529 1.074a15.4 15.4 0 0 0-4.579 0 11 11 0 0 0-.529-1.074c-1.425.243-2.814.67-4.129 1.273-2.611 3.863-3.319 7.63-2.965 11.345 1.53 1.13 3.24 1.989 5.06 2.54q.616-.828 1.084-1.748a11 11 0 0 1-1.706-.814q.215-.158.418-.315a11.89 11.89 0 0 0 10.118 0q.206.168.418.314-.819.483-1.71.817.469.92 1.084 1.746a16.6 16.6 0 0 0 5.064-2.539c.415-4.307-.71-8.04-2.973-11.35M8.678 14.752c-.987 0-1.802-.895-1.802-1.996s.787-2.004 1.798-2.004 1.82.903 1.803 2.004-.794 1.996-1.8 1.996m6.644 0c-.988 0-1.8-.895-1.8-1.996s.787-2.004 1.8-2.004 1.816.903 1.798 2.004c-.017 1.101-.793 1.996-1.798 1.996"></path>
+              </svg>
+              <span style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; overflow-wrap: normal;">
+                Rockstar Games Discord
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  
+    <div class="footer-bottom">
+      <div class="left">
+        <span>Rockstar Games</span>
+      </div>
+      <div class="center">
+        <span>New York</span>
+        <span>London</span>
+        <span>Paris</span>
+        <span>Bogotá</span>
+      </div>
+      <div class="right">
+        MCMXCVIII
+      </div>
+    </div>
+  </footer>
+</div>
+
 </body>
 </html>
