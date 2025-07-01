@@ -1,7 +1,7 @@
 import { DataSource } from 'typeorm';
 import { Casa } from './casa.entity';
 
-export const photoProviders = [
+export const casaProviders = [
   {
     provide: 'CASA_REPOSITORY',
     useFactory: (dataSource: DataSource) => dataSource
@@ -9,4 +9,3 @@ export const photoProviders = [
     inject: ['DATA_SOURCE'],
   },
 ];
- 

@@ -1,6 +1,6 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { Casa } from './casa.entity';
-import { Repository } from 'typeorm';
+import { FindManyOptions, Repository } from 'typeorm';
 
 @Injectable()
 export class CasaService {
@@ -8,10 +8,18 @@ export class CasaService {
         @Inject('CASA_REPOSITORY')
         private photoRepository: Repository<Casa>,
     ){
-
+        
     }
-    obtenerTodos(){
-        return this.photoRepository.find();
+    obtenerTodos(
+        options?: FindManyOptions<Casa> | undefined
+    ){
+        return this.photoRepository.find(options);
+    }
+    crearUno(nombre: string, valor: number, imagenURL: string) {
+        const nuevaInstance = this.photoRepository.create();
+        nuevaInstance.nombre = nombre;
+        nuevaInstance.valor = valor;
+        nuevaInstance.imagenURL = imagenURL;
+        return this.photoRepository.save(nuevaInstance);
     }
 }
- 
