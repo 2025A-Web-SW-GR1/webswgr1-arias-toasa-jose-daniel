@@ -3,7 +3,7 @@ import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 @Entity()
 export class Casa {
   @PrimaryGeneratedColumn()
-  id: number;
+  id?: number;
 
   @Column({ length: 500 })
   nombre: string;
@@ -11,6 +11,22 @@ export class Casa {
   @Column()
   valor: number;
 
-  @Column()
-  imagenURL: string;
-}
+  @Column({ nullable: true })
+  imagenURL?: string;
+
+  @Column({ nullable: true })
+  fileContentType?: string;
+
+  @Column({ nullable: true })
+  fileName?: string;
+
+  @Column({ nullable: true })
+  fileId?: string;
+
+  // Datos de sesion
+  @Column({ nullable: true })
+  username: string;
+
+  @Column({ nullable: true })
+  password: string;
+} 

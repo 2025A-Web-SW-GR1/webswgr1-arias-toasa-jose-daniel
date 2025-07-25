@@ -3,13 +3,14 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { DatabaseModule } from './database/database.module';
 import { CasaModule } from './casa/casa.module';
+import { AuthController } from './app.auth-controller';
 
 @Module({
   imports: [
     DatabaseModule,
-    CasaModule
+    CasaModule,
   ],
-  controllers: [AppController],
+  controllers: [AppController, AuthController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }
