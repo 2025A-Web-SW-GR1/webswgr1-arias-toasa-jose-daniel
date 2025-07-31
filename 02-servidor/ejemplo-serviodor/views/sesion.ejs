@@ -1,51 +1,40 @@
 <!doctype html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <title>Mi Sesión</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<% var arregloDeNumeros=[1,2,3,4,5]; %>
+<body>
+    <div class="container mt-4">
+        <% if (locals.casa && casa.username) { %>
+            <h1>¡Hola, <%= casa.username %>!</h1>
+            <p>Estos son los datos de tu propiedad:</p>
 
-    <body>
-        <h1>Datos Sesion</h1>
-        <div class="row">
-            <div class="col-sm-4"></div>
-            <div class="col-sm-4">
-                <% if (casa?.username) { %>
-                    <p><strong>Username: </strong>
-                        <%= casa.username %>
-                    </p>
-                    <p><strong>Nombre casa: </strong>
-                        <%= casa.nombre %>
-                    </p>
-                    <p><strong>Ejemplo iteracion:</strong></p>
+            <h2 class="mt-4">Tus datos</h2>
+            <table class="table table-bordered mb-4">
+                <thead class="table-dark">
+                    <tr><th scope="col">Campo</th><th scope="col">Valor</th></tr>
+                </thead>
+                <tbody>
+                    <tr><th scope="row">ID</th><td><%= casa.id %></td></tr>
+                    <tr><th scope="row">Nombre</th><td><%= casa.nombre %></td></tr>
+                    <tr><th scope="row">Valor</th><td>$<%= casa.valor %></td></tr>
+                    <tr><th scope="row">Imagen</th><td><img src="<%= casa.imagenURL %>" alt="Imagen de <%= casa.nombre %>" width="100" class="img-thumbnail"></td></tr>
+                    <tr><th scope="row">Propietario</th><td><%= casa.username %></td></tr>
+                </tbody>
+            </table>
+            
+            <a href="/auth/vista-todas" class="btn btn-primary">Ver el resto de casas</a>
+            <a href="/auth/logout" class="btn btn-danger">Logout</a>
 
-                    <ul>
-                        <% arregloDeNumeros.forEach(function(numero){ %>
-                            <li>
-                                <%= numero %>
-                            </li>
-                            <% }); %>
-                    </ul>
-                    <a href="/auth/logout">
-                        <button>
-                            Logout
-                        </button>
-                        </button>
-                        <% } else {%>
-                            <h2>NO tiene sesion!</h2>
-                            <% }%>
-            </div>
-            <div class="col-sm-4"></div>
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-            crossorigin="anonymous"></script>
-    </body>
-
+        <% } else { %>
+            <h2>¡No tienes sesión iniciada!</h2>
+            <a href="/auth/login-vista" class="btn btn-primary">Ir a Login</a>
+        <% } %>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

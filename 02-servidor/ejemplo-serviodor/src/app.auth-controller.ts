@@ -49,12 +49,28 @@ export class AuthController {
   }
 
   // Vista de casas
-  @Get('vista-casas')
-  async vistaCasas(@Res() res: any) {
-    const casas = await this.casaService.obtenerTodos();
-    res.render('casas', {
-      casas: casas
-    });
+  @Get('vista-todas')
+  async vistaTodasLasCasas(
+    @Res() res: any, 
+    @Session() session: Record<string, any>
+  ) {
+    // Redirige al login si no hay sesión
+    if (!session.user) {
+      return res.redirect('/auth/login-vista?mensaje=Debe iniciar sesión');
+    }
+    
+    try {
+      // 1. Obtiene todas las casas de la base de datos
+      const todasLasCasas = await this.casaService.obtenerTodos();
+
+      // 2. Renderiza la vista y le pasa los datos
+      res.render('vista-datos', {
+        casas: todasLasCasas,
+      });
+    } catch (e) {
+      console.error('Error al obtener todas las casas:', e);
+      res.redirect('/auth/sesion?mensaje=Error al cargar los datos');
+    }
   }
 
   // Eliminar la sesion
