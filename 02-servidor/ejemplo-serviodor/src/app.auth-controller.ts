@@ -48,6 +48,15 @@ export class AuthController {
     }
   }
 
+  // Vista de casas
+  @Get('vista-casas')
+  async vistaCasas(@Res() res: any) {
+    const casas = await this.casaService.obtenerTodos();
+    res.render('casas', {
+      casas: casas
+    });
+  }
+
   // Eliminar la sesion
   @Get('logout')
   logout(

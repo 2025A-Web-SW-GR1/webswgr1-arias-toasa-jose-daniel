@@ -18,10 +18,10 @@ export class Casa {
   fileContentType?: string;
 
   @Column({ nullable: true })
-  fileName?: string;
+  filename?: string;
 
   @Column({ nullable: true })
-  fileId?: string;
+  fileID?: string;
 
   // Datos de sesion
   @Column({ nullable: true })

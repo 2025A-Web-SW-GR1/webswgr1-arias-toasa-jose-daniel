@@ -15,9 +15,9 @@ import { MulterModule } from '@nestjs/platform-express';
     ...casaProviders,
     CasaService,
   ],
-  exports:[
+  exports: [
     ...casaProviders,
     CasaService,
   ]
 })
-export class CasaModule {}
+export class CasaModule { }
